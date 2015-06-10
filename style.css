@@ -338,46 +338,6 @@ td, th {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.content-area {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 4em;
-  margin-bottom: 2em; }
-.content-area::after {
-  clear: both;
-  content: "";
-  display: table; }
-
-.site-main {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%; }
-.site-main:last-child {
-  margin-right: 0; }
-@media screen and (min-width: 53.75em) {
-  .site-main {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%;
-    margin-left: 17.05961%; }
-  .site-main:last-child {
-    margin-right: 0; } }
-
-body {
-  font-family: "garamond-premier-pro", "Adobe Garamond Pro", "Adobe Garamond", serif;
-  font-size: 1em;
-  color: #333; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "proxima-nova", "Proxima Nova", sans-serif;
-  font-size: 1em;
-  line-height: 1.2;
-  margin: 0 0 0.75em; }
-
 .bigfoot-footnote__button {
   position: relative;
   z-index: 5;
@@ -390,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   border-radius: 0.3em;
   cursor: pointer;
-  background-color: rgba(110, 110, 110, 0.2);
+  background-color: rgba(64, 180, 228, 0.2);
   backface-visibility: hidden;
   font-size: 1rem;
   line-height: 0;
@@ -401,11 +361,11 @@ h1, h2, h3, h4, h5, h6 {
   transition-duration: 0.25s; }
 .bigfoot-footnote__button:hover, .bigfoot-footnote__button:focus {
   outline: none;
-  background-color: rgba(110, 110, 110, 0.5); }
+  background-color: rgba(64, 180, 228, 0.5); }
 .bigfoot-footnote__button:active {
-  background-color: rgba(110, 110, 110, 0.5); }
+  background-color: rgba(64, 180, 228, 0.5); }
 .bigfoot-footnote__button.is-active {
-  background-color: #6e6e6e;
+  background-color: #40b4e4;
   transition-delay: 0.1s; }
 .bigfoot-footnote__button:after {
   content: '';
@@ -581,12 +541,64 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   font-size: 0.57em;
   font-weight: bold;
-  color: rgba(110, 110, 110, 0.5);
+  color: rgba(64, 180, 228, 0.5);
   transition: color 0.25s ease; }
 .bigfoot-footnote__button:hover:after, .bigfoot-footnote__button.is-active:after {
   color: white; }
 
 .bigfoot-footnote__button__circle {
   display: none; }
+
+.content-area {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4em;
+  margin-bottom: 2em; }
+.content-area::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.site-main {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 8.5298%; }
+.site-main:last-child {
+  margin-right: 0; }
+@media screen and (min-width: 53.75em) {
+  .site-main {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%; }
+  .site-main:last-child {
+    margin-right: 0; } }
+
+body {
+  font-family: "garamond-premier-pro", "Adobe Garamond Pro", "Adobe Garamond", serif;
+  font-size: 1em;
+  color: #333; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "proxima-nova", "Proxima Nova", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em; }
+
+.entry-title {
+  font-size: 1.563em; }
+
+.entry-content h1, h2, h3 {
+  font-size: 1.25em; }
+
+.entry-content p, li {
+  font-size: 1.25em; }
+
+.bigfoot-footnote__content {
+  font-size: 0.8rem; }
 
 /*# sourceMappingURL=style.css.map */

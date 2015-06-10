@@ -15,3 +15,21 @@ h6 {
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
+
+// http://www.modularscale.com/?1&em&1.25&web&text
+
+.entry-title {
+  font-size: 1.563em;
+}
+
+.entry-content h1, h2, h3 {
+  font-size: 1.25em;
+}
+
+.entry-content p, li {
+  font-size: 1.25em;
+}
+
+.bigfoot-footnote__content {
+  font-size: 0.8rem;
+}

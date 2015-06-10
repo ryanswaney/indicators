@@ -145,7 +145,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+ * Custom Taxonomies
+ */
+require get_template_directory() . '/inc/custom-taxonomies.php';
+
+/**
  * Custom Post Type for Indicators
  */
 require get_template_directory() . '/inc/cpt-indicators.php';
-

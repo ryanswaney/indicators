@@ -23,6 +23,7 @@ function indicators() {
     'description'         => __( '100 Global Monitoring Indicators to track SDG progress', 'text_domain' ),
     'labels'              => $labels,
     'supports'            => array( 'title', 'editor', 'page-attributes' ),
+    'taxonomies'          => array( 'goal' ),
     'hierarchical'        => true,
     'public'              => true,
     'show_ui'             => true,
