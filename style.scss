@@ -1,0 +1,25 @@
+/*!
+Theme Name: indicators
+Theme URI: 
+Author: Ryan Swaney
+Author URI: http://smashandgrablabs.com
+Description: Custom theme for the SDSN Indicators & Monitoring Framework
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: indicators
+Tags:
+
+*/
+
+@import "scss/normalize";
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+@import "scss/settings";
+@import "scss/grid";
+@import "scss/typography";
+
+
+@import "scss/bigfoot-number";
