@@ -112,6 +112,11 @@ function indicators_scripts() {
 
 	wp_enqueue_script( 'bigfoot-footnotes', get_template_directory_uri() . '/js/bigfoot.min.js', array( 'jquery' ), '20130115', true );
 
+	if ( is_post_type_archive( 'indicators' ) ) {
+
+	wp_enqueue_script( 'instafilta', get_template_directory_uri() . '/js/instafilta.min.js', array( 'jquery' ), '', true );
+
+	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -153,3 +158,8 @@ require get_template_directory() . '/inc/custom-taxonomies.php';
  * Custom Post Type for Indicators
  */
 require get_template_directory() . '/inc/cpt-indicators.php';
+
+/**
+ * Custom WordPress Filters
+ */
+require get_template_directory() . '/inc/filters.php';

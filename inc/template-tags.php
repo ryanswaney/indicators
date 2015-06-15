@@ -264,3 +264,18 @@ function indicators_category_transient_flusher() {
 }
 add_action( 'edit_category', 'indicators_category_transient_flusher' );
 add_action( 'save_post',     'indicators_category_transient_flusher' );
+
+if ( ! function_exists( 'indicators_acf_get_term_slug' ) ) :
+/**
+ * Populates data-attribute with slug of custom taxonomy
+**/
+function indicators_acf_get_term_slug() {
+	$term = get_field('related_sdg');
+
+	if( $term ): 
+		echo 'data-instafilta-category="'.$term->slug.'"';
+	endif;
+
+}
+
+endif;

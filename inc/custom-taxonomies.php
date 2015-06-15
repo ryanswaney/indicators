@@ -9,7 +9,7 @@ function create_private_sdgs_tax() {
             'label' => __( 'Related SDGs' ),
             'show_ui' => true,
             'public' => false,
-            'rewrite' => false,
+            'rewrite' => true,
             'hierarchical' => true,
         )
     );

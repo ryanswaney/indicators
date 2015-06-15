@@ -22,6 +22,15 @@
 
 <script type="text/javascript">
     jQuery.bigfoot();
+
+    var ex8 = jQuery('#ex8f').instaFilta({
+        scope: '#ex8'
+    });
+
+    jQuery('#ex8s').on('change', function() {
+        ex8.filterCategory(jQuery(this).val());
+    });
+
 </script>
 
 

@@ -24,3 +24,9 @@ $action-color: #40b4e4;
 // Screen Sizing
 $medium-screen: em(640) !default;
 $large-screen: em(860) !default;
+
+
+body {
+  background: url('images/20150612-indicators-dmnd-bg-2.jpg');
+  background-size: contain;
+}
