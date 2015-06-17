@@ -6,8 +6,8 @@
  *
  * @package indicators
  */
-
-get_header(); ?>
+?>
+<?php get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -16,23 +16,41 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					//the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
 
-			<div id="ex8">
+			<div id="indicators-archive" class="indicators-archive">
 
-			<fieldset class="controls">
-	      <input type="text" id="ex8f" placeholder="Type here to filter" style="display:none">
-	      <select id="ex8s">
-	          <option value="">Show all</option>
-	          <option value="goal-1">Goal 1</option>
-	          <option value="goal-2">Goal 2</option>
-	          <option value="goal-3">Goal 3</option>
-	      </select>
+			<?php
+
+			$args = array(
+      'orderby'           => 'id', 
+      'order'             => 'ASC'
+      );
+
+			$terms = get_terms( 'goal', $args );
+ 
+ 			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
+ 			?>
+			<fieldset class="indicator-filter-controls">
+	    <input type="text" id="indicators-search" placeholder="" style="display:none">
+      <span class="arr"></span>
+	    <select id="indicators-by-goal">
+	    	<option value="">View all Indicators</option>
+ 			<?php
+     		foreach ( $terms as $term ) {
+       	echo '<option value="'.$term->slug.'">' . $term->name . '</option>';
+     		}
+     	?>
+     		</select>
       </fieldset>
+
+
+      <h1 id="goal-title">All Indicators</h1>
+    	<?php endif; ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

@@ -22,15 +22,25 @@
 
 <script type="text/javascript">
     jQuery.bigfoot();
+</script>
 
-    var ex8 = jQuery('#ex8f').instaFilta({
-        scope: '#ex8'
+<script type="text/javascript">
+    var filter_indicators = jQuery('#indicators-search').instaFilta({
+        scope: '#indicators-archive',
+        categoryDataAttr: 'indicator-category',
+        targets: '.filter-target'
     });
 
-    jQuery('#ex8s').on('change', function() {
-        ex8.filterCategory(jQuery(this).val());
-    });
+    jQuery('#indicators-by-goal').on('change', function() {
+        filter_indicators.filterCategory(jQuery(this).val());
 
+        var goalTitle = jQuery("#indicators-by-goal option:selected").text();
+
+        jQuery( '#goal-title' ).text( goalTitle  );
+
+
+
+    });
 </script>
 
 

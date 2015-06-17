@@ -7,7 +7,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php indicators_acf_get_term_slug(); ?> <?php post_class( 'filter-target' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<a href="<?php the_permalink(); ?>">
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

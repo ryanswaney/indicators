@@ -18,3 +18,8 @@
 .entry-footer {
   @include span-columns(11);
 }
+
+.indicators-archive {
+  @include span-columns(7);
+  @include shift(1);
+}

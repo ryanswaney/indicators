@@ -273,7 +273,7 @@ function indicators_acf_get_term_slug() {
 	$term = get_field('related_sdg');
 
 	if( $term ): 
-		echo 'data-instafilta-category="'.$term->slug.'"';
+		echo 'data-indicator-category="'.$term->slug.'"';
 	endif;
 
 }
