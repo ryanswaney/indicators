@@ -14,7 +14,7 @@
   margin: 0;
 
   transition: border-color 0.2s;
-  border: 5px solid $action-color;
+  border: 5px solid #ccc;
   border-radius: 5px;
 
   background: #fff;
@@ -42,7 +42,7 @@
   right: 24px;
   margin-top: -5px;
   pointer-events: none;
-  border-top: 10px solid $action-color;
+  border-top: 10px solid #ccc;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   }

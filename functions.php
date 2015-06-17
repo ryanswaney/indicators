@@ -160,6 +160,11 @@ require get_template_directory() . '/inc/custom-taxonomies.php';
 require get_template_directory() . '/inc/cpt-indicators.php';
 
 /**
+ * Custom Post Type for Indicators
+ */
+require get_template_directory() . '/inc/cpt-targets.php';
+
+/**
  * Custom WordPress Filters
  */
 require get_template_directory() . '/inc/filters.php';
