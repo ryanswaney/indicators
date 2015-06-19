@@ -23,6 +23,26 @@
 	</div><!-- .entry-content -->
 
 	<div class="entry-sidebar">
+  <?php
+
+      $posts = get_field('relevant_targets');
+
+    if ( $posts ): ?>
+
+    <h3>Relevant SDG Targets</h3>
+
+    <ul>
+    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+        <?php setup_postdata($post); ?>
+        <li>
+            <?php the_title(); ?>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+    <?php endif; ?>
+
+
 	<?php $term = get_field('related_sdg');
 
   if( $term ): ?>
