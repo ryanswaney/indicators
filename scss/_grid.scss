@@ -1,25 +1,64 @@
-.site-content {
- 
-  margin-top: 4em;
-  margin-bottom: 2em;
+
+.site {
+  @include outer-container;
+  @include pad(4em 0);
 }
+
+.site-header {
+  @include span-columns(3);
+}
+.site-content {
+  @include span-columns(9);
+  @include omega();
+}
+
+
+/*
+.site-header {
+
+  @include outer-container;
+
+  &:before {
+    background: #ccc;
+    content: "";
+    display: block;
+    min-height: 25px;
+  }
+}
+
+.site-branding {
+  @include margin(2em null);
+}
+
+.site-content {
+  @include outer-container;
+}
+
+*/
 
 /* Styles for Indicators custom post type display */ 
 .indicators {
    @include outer-container;
 }
 
+
+.entry-header {
+  @include span-columns(9);
+  @include omega();
+}
+
 .entry-content {
-  @include span-columns(7);
+  @include span-columns(8);
 }
 .entry-sidebar {
-  @include span-columns(3);
+  @include span-columns(4);
+  @include omega();
 }
 .entry-footer {
   @include span-columns(11);
 }
 
 .indicators-archive {
-  @include span-columns(7);
-  @include shift(1);
+  @include span-columns(10);
+  @include omega();
 }

@@ -32,15 +32,46 @@ h6 {
 
   p,
   li {
-    font-size: 1.25em;
+    font-size: 1em;
     line-height: $base-line-height;
   }
 }
 
 .entry-sidebar {
+
   h3,
   h4 { font-size: 0.8em; }
-  ul { @include pad(0); }
+
+  ul { 
+    @include pad(0);
+    list-style: none; 
+
+    li {
+      @include margin(null null 1em null);
+    }
+
+  }
+}
+
+.post-type-archive-indicators,
+.post-type-archive-targets,
+.tax-goal {
+
+  .type-indicators,
+  .type-targets {
+
+    .entry-header {
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .entry-title {
+      font-size: 1em;
+    }
+
+  }
+
 }
 
 .bigfoot-footnote__content {

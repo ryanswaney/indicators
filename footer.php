@@ -24,6 +24,7 @@
     jQuery.bigfoot();
 </script>
 
+<?php if ( is_post_type_archive( array( 'indicators', 'targets' ) ) ) : ?>
 <script type="text/javascript">
     var filter_indicators = jQuery('#indicators-search').instaFilta({
         scope: '#indicators-archive',
@@ -42,6 +43,7 @@
 
     });
 </script>
+<?php endif; ?>
 
 
 </body>

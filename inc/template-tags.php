@@ -277,5 +277,18 @@ function indicators_acf_get_term_slug() {
 	endif;
 
 }
+endif;
 
+if ( ! function_exists( 'indicators_get_target_tax' ) ) :
+/**
+ * Populates data-attribute with slug of custom taxonomy
+**/
+function indicators_get_target_tax() {
+	$term = get_field('target_taxonomy');
+
+	if( $term ): 
+		echo 'data-indicator-category="'.$term->slug.'"';
+	endif;
+
+}
 endif;

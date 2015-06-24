@@ -112,7 +112,7 @@ function indicators_scripts() {
 
 	wp_enqueue_script( 'bigfoot-footnotes', get_template_directory_uri() . '/js/bigfoot.min.js', array( 'jquery' ), '20130115', true );
 
-	if ( is_post_type_archive( 'indicators' ) ) {
+	if ( is_post_type_archive( array( 'indicators', 'targets' ) ) ) {
 
 	wp_enqueue_script( 'instafilta', get_template_directory_uri() . '/js/instafilta.min.js', array( 'jquery' ), '', true );
 
