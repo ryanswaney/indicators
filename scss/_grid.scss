@@ -1,40 +1,43 @@
 
 .site {
   @include outer-container;
-  @include pad(4em 0);
-}
+  @include pad(1em 0);
 
-.site-header {
-  @include span-columns(3);
-}
-.site-content {
-  @include span-columns(9);
-  @include omega();
-}
-
-
-/*
-.site-header {
-
-  @include outer-container;
-
-  &:before {
-    background: #ccc;
-    content: "";
-    display: block;
-    min-height: 25px;
+  @include media($large-screen) {
+    @include pad(4em 0);
   }
 }
 
-.site-branding {
-  @include margin(2em null);
+.site-header {
+  @include span-columns(12);
+  
+  @include media($large-screen) { 
+    @include span-columns(3);
+  }
 }
-
 .site-content {
-  @include outer-container;
+  @include span-columns(12);
+
+  @include media($large-screen) {
+    @include span-columns(9);
+    @include omega();
+  }
 }
 
-*/
+.site-main {
+  article {
+    @include outer-container;
+    @include border-width(0 0 2px 0);
+    @include border-style(solid);
+    @include border-color ($action-color);
+    @include margin(null null 2em null);
+
+    &:only-of-type {
+      border: none;
+    }
+  }
+}
+
 
 /* Styles for Indicators custom post type display */ 
 .indicators {
@@ -48,11 +51,20 @@
 }
 
 .entry-content {
-  @include span-columns(8);
+  @include span-columns(12);
+
+  @include media($large-screen) {
+    @include span-columns(8);
+  }
 }
 .entry-sidebar {
-  @include span-columns(4);
-  @include omega();
+
+  @include span-columns(12);
+
+  @include media($large-screen) {
+    @include span-columns(4);
+    @include omega();
+  }
 }
 .entry-footer {
   @include span-columns(11);

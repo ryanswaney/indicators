@@ -29,7 +29,7 @@
 
     if ( $posts ): ?>
 
-    <h3>Relevant SDG Targets</h3>
+    <h3>Open Working Group Targets</h3>
 
     <ul>
     <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>

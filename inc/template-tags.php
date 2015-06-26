@@ -286,7 +286,7 @@ if ( ! function_exists( 'indicators_get_target_tax' ) ) :
 function indicators_get_target_tax() {
 	$term = get_field('target_taxonomy');
 
-	if( $term ): 
+	if( $term ):
 		echo 'data-indicator-category="'.$term->slug.'"';
 	endif;
 

@@ -15,19 +15,13 @@ Tags:
 @import "scss/normalize";
 
 @import "bourbon/bourbon";
-
-$visual-grid: true !default;
-$visual-grid-color: #eee !default;
-
 @import "neat/neat";
-
-
 
 @import "scss/settings";
 
-@import "scss/bigfoot-number";
-
 @import "scss/grid";
 @import "scss/typography";
-//@import "scss/navigation";
-@import "scss/forms"
+@import "scss/navigation";
+@import "scss/forms";
+
+@import "scss/bigfoot-number";

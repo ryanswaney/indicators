@@ -21,7 +21,9 @@
 <?php wp_footer(); ?>
 
 <script type="text/javascript">
-    jQuery.bigfoot();
+    (function($) {
+        $.bigfoot();
+    })(jQuery);
 </script>
 
 <?php if ( is_post_type_archive( array( 'indicators', 'targets' ) ) ) : ?>
@@ -38,8 +40,6 @@
         var goalTitle = jQuery("#indicators-by-goal option:selected").text();
 
         jQuery( '#goal-title' ).text( goalTitle  );
-
-
 
     });
 </script>

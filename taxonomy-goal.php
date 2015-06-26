@@ -6,8 +6,8 @@
  *
  * @package indicators
  */
-?>
-<?php get_header(); ?>
+
+get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -15,39 +15,16 @@
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1>Open Working Group Targets</h1>
+				<h1 class="page-title">
+					<?php single_cat_title("", true); ?>
+				</h1>
+				<?php
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				?>
+				<h5>Open Working Group Targets</h5>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
-
-			<div id="indicators-archive" class="indicators-archive">
-
-			<?php
-
-			$args = array(
-      'orderby'           => 'title', 
-      'order'             => 'ASC'
-      );
-
-			$terms = get_terms( 'goal', $args );
- 
- 			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
- 			?>
-			<fieldset class="indicator-filter-controls">
-	    <input type="text" id="indicators-search" placeholder="" style="display:none">
-      <span class="arr"></span>
-	    <select id="indicators-by-goal">
-	    	<option value="">View all Targets</option>
- 			<?php
-     		foreach ( $terms as $term ) {
-       	echo '<option value="'.$term->slug.'">' . $term->name . '</option>';
-     		}
-     	?>
-     		</select>
-      </fieldset>
-
-      <?php endif; ?>
-
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
@@ -57,12 +34,12 @@
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'template-parts/content-archive-targets' );
+					get_template_part( 'template-parts/content-tax-goals' );
 				?>
 
 			<?php endwhile; ?>
 
-		</div>
+			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 
