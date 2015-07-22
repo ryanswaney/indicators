@@ -1,19 +1,28 @@
 
 .site {
+  
+  /*
   @include outer-container;
   @include pad(1em 0);
 
   @include media($large-screen) {
     @include pad(4em 0);
   }
+  */
+
+  width: 100%;
 }
 
 .site-header {
+  /*
   @include span-columns(12);
   
   @include media($large-screen) { 
     @include span-columns(3);
   }
+  */
+  background-color: $base-bg-color;
+  width: 100%;
 }
 .site-content {
   @include span-columns(12);
@@ -21,6 +30,12 @@
   @include media($large-screen) {
     @include span-columns(9);
     @include omega();
+  }
+}
+
+.page {
+  .site-content {
+    
   }
 }
 

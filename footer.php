@@ -20,11 +20,6 @@
 
 <?php wp_footer(); ?>
 
-<script type="text/javascript">
-    (function($) {
-        $.bigfoot();
-    })(jQuery);
-</script>
 
 <?php if ( is_post_type_archive( array( 'indicators', 'targets' ) ) ) : ?>
 <script type="text/javascript">

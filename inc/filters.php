@@ -10,6 +10,7 @@ function indicators_modify_indicators_query_limit( $query ) {
  
     $query->set('posts_per_page', '-1');
     $query->set( 'order', 'ASC' );
+    $query->set( 'orderby', 'menu_order');
  
   } elseif ( is_archive( 'goal' ) && $query->is_main_query() ) {
     $query->set('posts_per_page', '-1');
@@ -33,5 +34,20 @@ function indicators_modify_goals_taxonomy_query( $query ) {
   }
  
 }
+
+/**
+ * Add descriptions to menu items
+ */
+function indicators_nav_description( $item_output, $item, $depth, $args ) {
+
+    if ( 'primary' == $args->theme_location && $item->description ) {
+        $item_output = str_replace( $args->link_after . '</a>', '<div class="menu-item-description">' . $item->description . '</div>' . $args->link_after . '</a>', $item_output );
+    }
+
+    return $item_output;
+
+}
+
+add_filter( 'walker_nav_menu_start_el', 'indicators_nav_description', 10, 4 );
 
 ?>

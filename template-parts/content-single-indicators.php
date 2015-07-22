@@ -13,13 +13,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'indicators' ),
-				'after'  => '</div>',
-			) );
-		?>
+    <?php the_content(); ?>
 	</div><!-- .entry-content -->
 
 	<div class="entry-sidebar">

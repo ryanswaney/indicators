@@ -52,6 +52,7 @@
     <?php endif; ?>
 
 		<?php the_content(); ?>
+
 	</div><!-- .entry-content -->
 
 	<div class="entry-sidebar">

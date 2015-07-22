@@ -116,7 +116,7 @@ function indicators_scripts() {
 
 	wp_enqueue_script( 'indicators-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-	wp_enqueue_script( 'bigfoot-footnotes', get_template_directory_uri() . '/js/bigfoot.min.js', array( 'jquery' ), '20130115', true );
+	//wp_enqueue_script( 'bigfoot-footnotes', get_template_directory_uri() . '/js/bigfoot.min.js', array( 'jquery' ), '20130115', true );
 
 	if ( is_post_type_archive( array( 'indicators', 'targets' ) ) ) {
 
@@ -174,3 +174,8 @@ require get_template_directory() . '/inc/cpt-targets.php';
  * Custom WordPress Filters
  */
 require get_template_directory() . '/inc/filters.php';
+
+/**
+ * Custom WordPress Shortcodes
+ */
+//require get_template_directory() . '/inc/shortcodes.php';
