@@ -14,15 +14,7 @@
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-					//the_archive_title( '<h1 class="page-title">', '</h1>' );
-				?>
-			</header><!-- .page-header -->
-
 			<?php /* Start the Loop */ ?>
-
-			<div id="indicators-archive" class="indicators-archive">
 
 			<?php
 
@@ -35,6 +27,9 @@
  
  			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
  			?>
+
+      <div class="filter-container">
+
 			<fieldset class="indicator-filter-controls">
 	    <input type="text" id="indicators-search" placeholder="" style="display:none">
       <span class="arr"></span>
@@ -47,6 +42,10 @@
      	?>
      		</select>
       </fieldset>
+
+      </div>
+
+      <div id="indicators-archive" class="indicators-archive">
 
 
       <h1 id="goal-title">All Indicators</h1>
@@ -66,11 +65,12 @@
 
 			<?php endwhile; ?>
 
-		</div>
 
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+      </div>
 
 		<?php endif; ?>
 

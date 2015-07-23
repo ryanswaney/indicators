@@ -13,12 +13,5 @@
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
     </a>
 	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 

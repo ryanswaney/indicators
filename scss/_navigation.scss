@@ -1,14 +1,15 @@
 .main-navigation {
   width: 100%;
 }
-.menu-navigation-container {
-  background-color: darken($base-bg-color, 10%);
-  
-}
 
-.nav-menu { @include outer-container(100%); }
-.menu { 
-  
+.nav-menu { 
+  @include outer-container(100%);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu {
+
   li { 
     @include span-columns(12);
     @include omega(12n);
@@ -20,25 +21,20 @@
   }
 }
 
-.toggled {
-  .menu-navigation-container {
-    visibility: hidden;
-  }
-}
-
-.nav-menu {
-  @include pad(0);
-  list-style: none;
-}
-
 .menu-item {
 
-  a { 
-    @include pad(1em);
+  &:hover,
+  &:focus {
+      background-color: rgba($action-color, .5);
+  }
+
+  a {
+    color: darken($action-color, 90%);
     display: block;
     font-family: $navigation-font-family;
     font-weight: 700;
     text-decoration: none;
+    padding: 2em;
   }
 
 }
@@ -48,4 +44,34 @@
   border-top: 1px solid;
   margin-top: 0.8em;
   padding-top: 0.8em;
+}
+
+.menu-toggle {
+  background: darken($action-color, 20%);
+  border: none;
+  font-family: $navigation-font-family;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: none;
+  padding: 1em;
+  width: 100%;
+
+  @include media($large-screen) {
+    display: none;
+  }
+}
+
+.menu-navigation-container {
+  background-color: darken($action-color, 10%);
+  display: none;
+
+  @include media($large-screen) {
+    display: block;
+  } 
+}
+
+.toggled {
+  .menu-navigation-container {
+    display: block;
+  }
 }
