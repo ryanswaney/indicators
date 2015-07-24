@@ -53,7 +53,6 @@ article.page {
 
   .entry-header {
     background-color: $action-color;
-    color: #fff;
     margin-bottom: 2em;
     padding: 2em 0;
     position: relative;
@@ -74,10 +73,11 @@ article.page {
     }
 
     h1 {
-      font-weight: 300;
-      font-size: 2.441em;
+      font-size: 1.563em;
+      font-size: 4vw;
+      margin-top: 0;
+      margin-bottom: .5em;
       text-align: center;
-      margin: 0;
     }
 
   }
