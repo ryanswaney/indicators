@@ -14,13 +14,11 @@
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1>Open Working Group Targets</h1>
-			</header><!-- .page-header -->
-
 			<?php /* Start the Loop */ ?>
 
-			<div id="indicators-archive" class="indicators-archive">
+			<div class="filter-container">
+
+      <h1>Open Working Group Targets by Goal</h1>
 
 			<?php
 
@@ -37,7 +35,7 @@
 	    <input type="text" id="indicators-search" placeholder="" style="display:none">
       <span class="arr"></span>
 	    <select id="indicators-by-goal">
-	    	<option value="">View all Targets</option>
+	    	<option value="">All Targets</option>
  			<?php
      		foreach ( $terms as $term ) {
        	echo '<option value="'.$term->slug.'">' . $term->name . '</option>';
@@ -46,7 +44,13 @@
      		</select>
       </fieldset>
 
+      </div>
+
       <?php endif; ?>
+
+      <div id="targets-archive" class="targets-archive">
+
+      <h1 id="goal-title">All Targets</h1>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

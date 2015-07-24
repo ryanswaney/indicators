@@ -1,11 +1,8 @@
-.indicators-archive {
-  @include outer-container(100%);
-}
-
 .filter-container {
   background-color: $action-color;
   padding: 2em;
   position: relative;
+  text-align: center;
 
   &:after {
     content: '';
@@ -19,15 +16,23 @@
     border-right: 16px solid transparent;
     border-top: 16px solid $action-color;
     }
+
+    h1 { 
+      font-size: 1.563em;
+      font-size: 4vw;
+      margin-top: 0;
+      margin-bottom: .5em;
+    }
 }
 
 .indicator-filter-controls {
 
   position: relative;
-  display: inline-block;
+  display: block;
   border: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 75%;
 
   select {
     outline: none;
@@ -36,8 +41,8 @@
     padding: 1.2em 3em 1.3em 1.5em;
     margin: 0;
 
-    transition: border-color 0.2s;
-    border: 5px solid darken($action-color, 20%);
+    //transition: border-color 0.2s;
+    border: 5px solid lighten($base-border-color, 15%);
     border-radius: 5px;
 
     background: #fff;

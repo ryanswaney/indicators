@@ -30,11 +30,13 @@
 
       <div class="filter-container">
 
+      <h1>Indicators by Goal</h1>
+
 			<fieldset class="indicator-filter-controls">
 	    <input type="text" id="indicators-search" placeholder="" style="display:none">
       <span class="arr"></span>
 	    <select id="indicators-by-goal">
-	    	<option value="">View all Indicators</option>
+	    	<option value="">All Indicators</option>
  			<?php
      		foreach ( $terms as $term ) {
        	echo '<option value="'.$term->slug.'">' . $term->name . '</option>';

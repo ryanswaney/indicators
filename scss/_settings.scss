@@ -20,7 +20,8 @@ $base-bg-color: #f4fbfe;
 $base-font-color: #333;
 $highlight-color: #f99d1c;
 $base-border-color: #ccc;
-$action-color: #ccc;
+//$action-color: darken(#f4fbfe, 10%);
+$action-color: #fff;
 
 // Screen Sizing
 $medium-screen: em(640) !default;
