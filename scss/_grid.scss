@@ -8,7 +8,56 @@
 }
 
 .site-branding {
+  @include outer-container(75%);
+
+  @include media($large-screen) {
+    @include outer-container(65%);
+  }
+
   padding: 2em 0;
+
+  ul {
+    @include fill-parent();
+    @include row(table);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.site-logo {
+  @include span-columns(1 of 12);
+  img { max-width: 100%; }
+}
+
+.site-meta {
+  @include span-columns(10 of 12);
+  @include reset-display;
+  vertical-align: middle;
+  padding-left: 1em;
+ 
+}
+
+.site-title {
+  font-size: 1.953em;
+  font-size: 3vw;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  a {
+    color: $base-font-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: lighten($base-font-color, 20%);
+    }
+  }
+}
+
+.site-description {
+  font-size: 1.25em;
+  font-size: 2vw;
 }
 
 .site-content,
@@ -48,8 +97,15 @@
 article.page {
   @include outer-container(100%);
 
-  background-image: url('images/20150612-indicators-dmnd-bg.jpg');
+  background: linear-gradient(
+      rgba(#00aeed, .1),
+      rgba(#238ccc, .2),
+      rgba(#1079be, .3)
+    ), 
+  url('images/20150612-indicators-dmnd-bg.jpg');
   background-repeat: repeat-y;
+
+  padding-bottom: 4em;
 
   .entry-header {
     background-color: $action-color;
@@ -74,9 +130,8 @@ article.page {
 
     h1 {
       font-size: 1.563em;
-      font-size: 4vw;
-      margin-top: 0;
-      margin-bottom: .5em;
+      font-size: 3vw;
+      margin: 0 auto;
       text-align: center;
     }
 
@@ -102,9 +157,9 @@ article.page {
   .site-main {
   background-color: #fff;
   background: linear-gradient(
-      rgba(#fcaf40, .6),
-      rgba(#d73647, .7),
-      rgba(#9f1f63, .8)
+      rgba(#fcaf40, .1),
+      rgba(#d73647, .2),
+      rgba(#9f1f63, .3)
     ),
     url('images/20150612-indicators-dmnd-bg.jpg');
 
@@ -113,9 +168,9 @@ article.page {
 .post-type-archive-targets {
   .site-main {
   background: linear-gradient(
-      rgba(#00aeed, .3),
-      rgba(#238ccc, .4),
-      rgba(#1079be, .5)
+      rgba(#c1d72e, .1),
+      rgba(#249745, .2),
+      rgba(#046a3a, .3)
     ),
     url('images/20150612-indicators-dmnd-bg.jpg');
 
@@ -203,6 +258,14 @@ article.page {
 
   @include media($large-screen) {
     @include span-columns(8);
+  }
+
+  a {
+    color: $base-font-color;
+    &:hover,
+    &:focus {
+      color: #00aeed;
+    } 
   }
 }
 .entry-sidebar {

@@ -27,8 +27,19 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
+			<ul>
+			<?php if ( get_header_image() ) : ?>
+			<li class="site-logo">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"  rel="home">
+				<img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>">
+			</a>
+			</li>
+			<?php endif; // End header image check. ?>
+			<li class="site-meta">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<div class="site-description"><?php bloginfo( 'description' ); ?></div>
+			</li>
+			</ul>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">

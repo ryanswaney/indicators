@@ -25,8 +25,8 @@ function indicators_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'indicators_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 400,
+		'height'                 => 400,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'indicators_header_style',
 		'admin-head-callback'    => 'indicators_admin_header_style',
