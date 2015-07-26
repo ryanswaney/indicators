@@ -153,7 +153,8 @@ article.page {
 
 /* Styles for Indicators + Targets custom post type display */
 
-.post-type-archive-indicators {
+.post-type-archive-indicators,
+.single-indicators {
   .site-main {
   background-color: #fff;
   background: linear-gradient(
@@ -165,7 +166,8 @@ article.page {
 
   }
 }
-.post-type-archive-targets {
+.post-type-archive-targets,
+.single-targets {
   .site-main {
   background: linear-gradient(
       rgba(#c1d72e, .1),
@@ -202,6 +204,7 @@ article.page {
 
   article.indicators,
   article.targets {
+    
     @include span-columns(10 of 12);
     @include shift(1);
 
@@ -241,42 +244,111 @@ article.page {
     }
 
   }
-}
+} // .indicators-archive + .targets-archive
 
-.indicators {
-  //@include outer-container;
-}
+.single-indicators {
+
+  article.indicators {
+    @include outer-container(100%);
+
+    .entry-header {
+
+      background-color: $action-color;
+      margin-bottom: 2em;
+      padding: 2em 0;
+      position: relative;
+      width: 100%;
 
 
-.entry-header {
-  @include span-columns(9);
-  @include omega();
-}
+      &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -15px;
+      margin-left: -16px;
+      width: 0;
+      height: 0;
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
+      border-top: 16px solid $action-color;
+      }
 
-.entry-content {
-  @include span-columns(12);
+      h1 {
+        font-size: 1.563em;
+        //font-size: 2vw;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 90%;
 
-  @include media($large-screen) {
-    @include span-columns(8);
+        @include media($large-screen) {
+          max-width: 60%;
+        }
+      }
+
+      span {
+        color: lighten($base-border-color, 5%);
+        display: block;
+        font-size: 75%;
+        text-transform: uppercase;
+
+      }
+
+    }
+
   }
 
-  a {
-    color: $base-font-color;
-    &:hover,
-    &:focus {
-      color: #00aeed;
-    } 
-  }
-}
-.entry-sidebar {
+} // .single-indicators page/article
 
-  @include span-columns(12);
+.single-targets {
 
-  @include media($large-screen) {
-    @include span-columns(4);
-    @include omega();
+  article.targets {
+    @include outer-container(100%);
+
+    .entry-header {
+
+      background-color: $action-color;
+      margin-bottom: 2em;
+      padding: 2em 0;
+      position: relative;
+      width: 100%;
+
+
+      &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -15px;
+      margin-left: -16px;
+      width: 0;
+      height: 0;
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
+      border-top: 16px solid $action-color;
+      }
+
+      h1 {
+        font-size: 1.563em;
+        //font-size: 2vw;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 90%;
+
+        @include media($large-screen) {
+          max-width: 60%;
+        }
+      }
+
+      span {
+        color: lighten($base-border-color, 5%);
+        display: block;
+        font-size: 75%;
+        text-transform: uppercase;
+
+      }
+
+    }
+
   }
+
 }
-.entry-footer {
-  @include span-columns(11);
-}
+
