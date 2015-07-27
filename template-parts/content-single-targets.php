@@ -38,7 +38,7 @@
 
     <?php if( $indicators ): ?>
 
-      <h3>Relevant Indicators</h3>
+      <h3>Proposed Indicators</h3>
 
       <ul>
       <?php foreach( $indicators as $indicator ): ?>
@@ -61,11 +61,11 @@
 
   if( $term ): ?>
 
-  <h3>Primary goal Target applies to:</h3>
+  <h2>Primary goal Target applies to:</h2>
 
-  <h4>
+  <p>
   	<a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?></a>
-  </h4>
+  </p>
 
   <?php endif; ?>
 

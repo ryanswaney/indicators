@@ -73,6 +73,8 @@
 
 .site-footer {
 
+  @include outer-container(100%);
+
   background-color: #fff;
   position: relative;
 
@@ -90,6 +92,19 @@
     //border-top: 16px solid $action-color;
     }
 
+  .site-info {
+    @include span-columns(10 of 12);
+    @include shift(1);
+
+    padding: 2em 0;
+
+    @include media($large-screen) {
+      @include span-columns(6 of 12);
+      @include shift(3);
+    }
+
+    h4 { text-align: center;}
+  }
 
 }
 
@@ -178,6 +193,77 @@ article.page {
 
   }
 }
+
+.tax-goal {
+  .site-main {
+    background: linear-gradient(
+      rgba(#fbac3b, .1),
+      rgba(#f26830, .2),
+      rgba(#ef4136, .3)
+    ),
+    url('images/20150612-indicators-dmnd-bg.jpg');
+
+    padding-bottom: 4em;
+  }
+
+  .page-header {
+    background-color: $action-color;
+    margin-bottom: 2em;
+    padding: 2em 0;
+    position: relative;
+    width: 100%;
+
+
+    &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    margin-left: -16px;
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-top: 16px solid $action-color;
+    }
+
+    h1 {
+      font-size: 1.563em;
+      font-size: 3vw;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 60%;
+    }
+
+  }
+
+  article.targets {
+    @include outer-container();
+
+    .entry-header,
+    .entry-content {
+
+      @include span-columns(10 of 12);
+      @include shift(1);
+
+      @include span-columns(6 of 12);
+      @include shift(3);
+    }
+
+    .entry-header {
+      a { color: #000; }
+    }
+
+    .entry-title {
+      font-size: 1.25em;
+      span {
+        display: block;
+        opacity: .5;
+      }
+    }
+
+  }
+} // .tax-goal page styles
 
 .indicators-archive,
 .targets-archive {
@@ -293,9 +379,44 @@ article.page {
 
       }
 
+    } // .entry-header
+
+    .entry-content {
+      @include span-columns(10 of 12);
+      @include shift(1);
+
+      @include media($large-screen) {
+        @include span-columns(6 of 12);
+        //@include shift(3);
+      }
+    } // .entry-content
+
+    .entry-sidebar {
+
+      @include span-columns(10 of 12);
+      @include shift(1);
+
+      @include media($large-screen ) {
+        @include span-columns(4 of 12);
+        @include shift(0);
+      }
+
+      a { display: block; }
+
+      ul > li {
+        font-size: 90%;
+      }
+
+    } // .entry-sidebar
+
+    .entry-footer {
+      @include span-columns(10 of 12);
+      @include shift(1);
+
+      padding-bottom: 4em;
     }
 
-  }
+  } // .article.indicators
 
 } // .single-indicators page/article
 
@@ -346,9 +467,86 @@ article.page {
 
       }
 
+    } // .entry-header
+
+    .entry-content {
+      @include span-columns(10 of 12);
+      @include shift(1);
+
+      @include media($large-screen) {
+        @include span-columns(6 of 12);
+        @include shift(3);
+      }
+
+      ul {
+        list-style: none;
+        margin: 0 0 2em 0;
+        padding: 0;
+
+        li { margin-bottom: 1em;}
+      }
+
+      a {
+        border-left: 5px solid rgba(0,0,0,0.2);
+        display: block;
+        padding: 1em 0em 1em 1em;
+        text-decoration: none;
+      }
+
+    } // .entry-content
+
+    .entry-sidebar {
+
+      @include span-columns(10 of 12);
+      @include shift(1);
+
+      @include media($large-screen ) {
+        @include span-columns(6 of 12);
+        @include shift(3);
+      }
+
+      a { display: block; }
+
+      ul > li {
+        font-size: 90%;
+      }
+
+    } // .entry-sidebar
+
+    .entry-footer {
+      @include span-columns(6 of 12);
+      @include shift(3);
+
+      padding-top: 2em;
+      padding-bottom: 4em;
     }
 
   }
 
+} // .single-targets
+
+// Misc styles shared by posts, pages, CPTs
+
+.entry-content,
+.entry-footer,
+.entry-sidebar,
+.site-info {
+  a { 
+    color: #000;
+    &:hover,
+    &:focus {
+      opacity: .7;
+    }
+  }
+}
+
+.footnotes {
+  margin-bottom: 3em;
+
+  hr { border: 2px solid #000; opacity: .25; }
+
+  ol > li {
+    font-size: 75%;
+  }
 }
 

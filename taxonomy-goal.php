@@ -18,10 +18,6 @@ get_header(); ?>
 				<h1 class="page-title">
 					<?php single_cat_title("", true); ?>
 				</h1>
-				<?php
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-				<h5>Open Working Group Targets</h5>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
@@ -38,8 +34,6 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 

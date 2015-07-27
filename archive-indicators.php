@@ -19,7 +19,7 @@
 			<?php
 
 			$args = array(
-      'orderby'           => 'id', 
+      'orderby'           => 'title', 
       'order'             => 'ASC'
       );
 

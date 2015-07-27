@@ -18,7 +18,7 @@
 
 			<div class="filter-container">
 
-      <h1>Open Working Group Targets by Goal</h1>
+      <h1>Indicators by Target</h1>
 
 			<?php
 

@@ -23,13 +23,15 @@
 
     if ( $posts ): ?>
 
-    <h3>Open Working Group Targets</h3>
+    <h3>Relevant Targets</h3>
 
     <ul>
     <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
         <?php setup_postdata($post); ?>
         <li>
+          <a href="<?php echo get_permalink(); ?>">
             <?php the_title(); ?>
+          </a>
         </li>
     <?php endforeach; ?>
     </ul>
@@ -43,9 +45,11 @@
 
   <h3>Primary goal indicator applies to:</h3>
 
-  <h4>
-  	<a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?></a>
-  </h4>
+  <ul>
+    <li>
+    	<a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?></a>
+    </li>
+  </ul>
 
   <?php endif; ?>
 
@@ -61,10 +65,9 @@
 
 	<?php foreach( $terms as $term ): ?>
 
-	<h4>
+	<li>
 		<a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?></a>
-	</h4>
-	<p><?php echo $term->description; ?></p>
+	</li>
 
 	<?php endforeach; ?>
 
