@@ -251,7 +251,9 @@ article.page {
     }
 
     .entry-header {
-      a { color: #000; }
+      a > h1 {
+        &:hover, &:focus { opacity: .5; }
+      }
     }
 
     .entry-title {
@@ -264,6 +266,30 @@ article.page {
 
   }
 } // .tax-goal page styles
+
+.proposed-indicators {
+
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-bottom: 1em;
+  }
+  li > a {
+
+    color: #000;
+    border-left: 5px solid rgba(0,0,0, .2);
+    display: block;
+    padding: 0.8em 0em 0.8em 0.8em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      border-left: 5px solid rgba(0,0,0, .4);
+    }
+
+  }
+}
 
 .indicators-archive,
 .targets-archive {
@@ -310,7 +336,7 @@ article.page {
         color: #000;
         border-left: 5px solid rgba(0,0,0, .2);
         display: block;
-        padding: 1.5em 0em 1.5em 1em;
+        padding: 0.8em 0em 0.8em 0.8em;
 
         &:hover,
         &:focus {
@@ -489,7 +515,7 @@ article.page {
       a {
         border-left: 5px solid rgba(0,0,0,0.2);
         display: block;
-        padding: 1em 0em 1em 1em;
+        padding: 0.8em 0em 0.8em 0.8em;
         text-decoration: none;
       }
 
@@ -527,15 +553,17 @@ article.page {
 
 // Misc styles shared by posts, pages, CPTs
 
+.entry-header,
 .entry-content,
 .entry-footer,
 .entry-sidebar,
 .site-info {
   a { 
     color: #000;
+
     &:hover,
     &:focus {
-      opacity: .7;
+      opacity: .5;
     }
   }
 }
