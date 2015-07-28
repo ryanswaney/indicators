@@ -553,10 +553,10 @@ article.page {
 
 // Misc styles shared by posts, pages, CPTs
 
+
 .entry-header,
 .entry-content,
 .entry-footer,
-.entry-sidebar,
 .site-info {
   a { 
     color: #000;
@@ -566,6 +566,22 @@ article.page {
       opacity: .5;
     }
   }
+}
+
+.entry-sidebar {
+
+  a {
+    color: #000;
+    border-left: 5px solid rgba(0,0,0,0.2);
+    display: block;
+    padding: 0.8em 0em 0.8em 0.8em;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      opacity: .5;
+    }
+  }
+
 }
 
 .footnotes {
