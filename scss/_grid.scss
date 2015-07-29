@@ -104,12 +104,21 @@
     }
 
     h4 { text-align: center;}
+
+    p { text-align: center; }
+
+    img.aligncenter {
+      width: 25%;
+      margin: 1em auto;
+      display: block;
+    }
   }
 
 }
 
 // Styles for Pages
-article.page {
+article.page,
+article.error-404 {
   @include outer-container(100%);
 
   background: linear-gradient(
@@ -289,6 +298,82 @@ article.page {
     }
 
   }
+} // proposed-indicators
+
+// Search + 404 Styles
+.search {
+  .site-main {
+    background: linear-gradient(
+      rgba(#00aeed, .1),
+      rgba(#238ccc, .2),
+      rgba(#1079be, .3)
+    ), 
+    url('images/20150612-indicators-dmnd-bg.jpg');
+
+    padding-bottom: 4em;
+  }
+
+  .page-header {
+    background-color: $action-color;
+    margin-bottom: 2em;
+    padding: 2em 0;
+    position: relative;
+    width: 100%;
+
+
+    &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    margin-left: -16px;
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-top: 16px solid $action-color;
+    }
+
+    h1 {
+      font-size: 1.563em;
+      font-size: 3vw;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+  }
+
+  article.targets,
+  article.indicators {
+    @include outer-container();
+
+    margin-bottom: 1em;
+
+    .entry-header,
+    .entry-summary,
+    .entry-footer {
+
+      @include span-columns(10 of 12);
+      @include shift(1);
+
+      @include span-columns(6 of 12);
+      @include shift(3);
+    }
+
+    .entry-header {
+      a { text-decoration: none; }
+      a > h1 {
+        &:hover, &:focus { opacity: .5; }
+      }
+    }
+
+    .entry-title {
+      font-size: 1.25em;
+      margin: 0;
+    }
+
+
+}
 }
 
 .indicators-archive,
@@ -593,4 +678,3 @@ article.page {
     font-size: 75%;
   }
 }
-

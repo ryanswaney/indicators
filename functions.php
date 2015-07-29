@@ -174,8 +174,3 @@ require get_template_directory() . '/inc/cpt-targets.php';
  * Custom WordPress Filters
  */
 require get_template_directory() . '/inc/filters.php';
-
-/**
- * Custom WordPress Shortcodes
- */
-//require get_template_directory() . '/inc/shortcodes.php';
