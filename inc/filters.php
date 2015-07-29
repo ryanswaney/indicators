@@ -35,6 +35,20 @@ function indicators_modify_goals_taxonomy_query( $query ) {
  
 }
 
+add_action( 'pre_get_posts', 'indicators_modify_search_query' );
+ 
+function indicators_modify_search_query( $query ) {
+ 
+  // Show all results on search pages.
+  if( is_search() && $query->is_main_query() ) {
+ 
+    $query->set( 'posts_per_page', '-1' );
+    $query->set( 'post_type', array('targets','indicators') );
+ 
+  }
+ 
+}
+
 /**
  * Add descriptions to menu items
  */
