@@ -19,9 +19,13 @@
 
     h1 { 
       font-size: 1.563em;
-      font-size: 3vw;
+      font-size: 5vw;
       margin-top: 0;
       margin-bottom: .5em;
+
+      @include media($large-screen) {
+        font-size: 3vw;
+      }
     }
 }
 

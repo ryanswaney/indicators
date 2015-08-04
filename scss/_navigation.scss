@@ -1,6 +1,7 @@
 .main-navigation {
-  border-top: 5px solid lighten($base-border-color, 15%);
-  border-bottom: 5px solid lighten($base-border-color, 15%);
+  background: $action-color;
+  //border-top: 5px solid lighten($base-border-color, 15%);
+  //border-bottom: 5px solid lighten($base-border-color, 15%);
   width: 100%;
 }
 
@@ -25,16 +26,16 @@
 .menu-item {
 
   a {
-    color: darken($action-color, 50%);
+    color: #000;
     display: block;
     font-family: $navigation-font-family;
     font-weight: 700;
     text-decoration: none;
-    padding: 2em 1em;
+    padding: 1em 1em 2em 1em;
 
     &:hover,
     &:focus {
-      color: #000;
+      color: darken($action-color, 50%);
     }
 
   }

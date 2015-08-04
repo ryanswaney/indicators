@@ -2,16 +2,30 @@
   width: 100%;
 }
 
+.page,
+.error404,
+.search {
+  .site {
+    background: linear-gradient(
+      rgba(#00aeed, .1),
+      rgba(#238ccc, .2),
+      rgba(#1079be, .3)
+    ), 
+  url('images/20150612-indicators-dmnd-bg.jpg');
+  background-repeat: repeat-y;
+  }
+}
+
 .site-header {
-  background-color: $action-color;
+  border-bottom: 1px solid lighten($base-border-color, 15%);
   width: 100%;
 }
 
 .site-branding {
-  @include outer-container(75%);
+  @include outer-container(90%);
 
   @include media($large-screen) {
-    @include outer-container(65%);
+    @include outer-container(70%);
   }
 
   padding: 2em 0;
@@ -26,23 +40,50 @@
 }
 
 .site-logo {
-  @include span-columns(1 of 12);
+  @include span-columns(2 of 12);
   img { max-width: 100%; }
+  vertical-align: middle;
+  
+  @include media($large-screen) {
+    @include span-columns(1 of 12);
+  }
 }
 
 .site-meta {
   @include span-columns(10 of 12);
-  @include reset-display;
   vertical-align: middle;
   padding-left: 1em;
- 
+
+  @include media($large-screen){
+    @include span-columns(10 of 12);
+  }
+  
+}
+.sdsn-logo {
+  @include span-columns(2 of 12);
+
+  img { max-width: 100%; }
+  vertical-align: middle;
+  
+
+  @include media($large-screen) {
+    @include span-columns(1 of 12);
+  }
+
+  @include reset-display;
+  
 }
 
 .site-title {
   font-size: 1.953em;
-  font-size: 3vw;
+  font-size: 5vw;
   margin-bottom: 0;
   margin-top: 0;
+
+  @include media($large-screen) {
+    font-size: 1.953em;
+    font-size: 3vw;
+  }
 
   a {
     color: $base-font-color;
@@ -57,7 +98,10 @@
 
 .site-description {
   font-size: 1.25em;
-  font-size: 2vw;
+  font-size: 4vw;
+  @include media($large-screen) {
+    font-size: 2vw;
+  }
 }
 
 .site-content,
@@ -66,10 +110,6 @@
   width: 100%;
 }
 
-.site-main {
-  background-image: url('images/20150612-indicators-dmnd-bg.jpg');
-  background-repeat: repeat-y;
-}
 
 .site-footer {
 
@@ -121,14 +161,6 @@ article.page,
 article.error-404 {
   @include outer-container(100%);
 
-  background: linear-gradient(
-      rgba(#00aeed, .1),
-      rgba(#238ccc, .2),
-      rgba(#1079be, .3)
-    ), 
-  url('images/20150612-indicators-dmnd-bg.jpg');
-  background-repeat: repeat-y;
-
   padding-bottom: 4em;
 
   .entry-header {
@@ -154,9 +186,13 @@ article.error-404 {
 
     h1 {
       font-size: 1.563em;
-      font-size: 3vw;
+      font-size: 5vw;
       margin: 0 auto;
       text-align: center;
+
+      @include media($large-screen) {
+        font-size: 3vw;
+      }
     }
 
   }
@@ -179,7 +215,7 @@ article.error-404 {
 
 .post-type-archive-indicators,
 .single-indicators {
-  .site-main {
+  .site {
   background-color: #fff;
   background: linear-gradient(
       rgba(#fcaf40, .1),
@@ -192,7 +228,7 @@ article.error-404 {
 }
 .post-type-archive-targets,
 .single-targets {
-  .site-main {
+  .site {
   background: linear-gradient(
       rgba(#c1d72e, .1),
       rgba(#249745, .2),
@@ -204,14 +240,16 @@ article.error-404 {
 }
 
 .tax-goal {
-  .site-main {
+  .site {
     background: linear-gradient(
       rgba(#fbac3b, .1),
       rgba(#f26830, .2),
       rgba(#ef4136, .3)
     ),
     url('images/20150612-indicators-dmnd-bg.jpg');
+  }
 
+  .site-main {
     padding-bottom: 4em;
   }
 
@@ -238,10 +276,14 @@ article.error-404 {
 
     h1 {
       font-size: 1.563em;
-      font-size: 3vw;
+      font-size: 5vw;
       margin: 0 auto;
       text-align: center;
       max-width: 60%;
+
+      @include media($large-screen) {
+        font-size: 3vw;
+      }
     }
 
   }
@@ -255,8 +297,10 @@ article.error-404 {
       @include span-columns(10 of 12);
       @include shift(1);
 
-      @include span-columns(6 of 12);
-      @include shift(3);
+      @include media($large-screen) {
+        @include span-columns(6 of 12);
+        @include shift(3);
+      }
     }
 
     .entry-header {
@@ -302,14 +346,15 @@ article.error-404 {
 
 // Search + 404 Styles
 .search {
-  .site-main {
+  .site {
     background: linear-gradient(
       rgba(#00aeed, .1),
       rgba(#238ccc, .2),
       rgba(#1079be, .3)
     ), 
     url('images/20150612-indicators-dmnd-bg.jpg');
-
+  }
+  .site-main {
     padding-bottom: 4em;
   }
 
@@ -336,9 +381,13 @@ article.error-404 {
 
     h1 {
       font-size: 1.563em;
-      font-size: 3vw;
+      font-size: 5vw;
       margin: 0 auto;
       text-align: center;
+
+      @include media($large-screen) {
+        font-size: 3vw;
+      }
     }
 
   }
@@ -356,8 +405,10 @@ article.error-404 {
       @include span-columns(10 of 12);
       @include shift(1);
 
-      @include span-columns(6 of 12);
-      @include shift(3);
+      @include media($large-screen) {
+        @include span-columns(6 of 12);
+        @include shift(3);
+      }
     }
 
     .entry-header {
